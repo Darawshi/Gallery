@@ -1,10 +1,10 @@
 <template>
     <div class="ui secondary pointing menu">
-        <a class="item">Home</a>
+        <router-link to="/" class="item">Home</router-link>
         <div class="right menu">
             <div v-if="isLoggedIn" class="horizontal">
-                <a class="ui item">Gallery</a>
-                <a class="ui item">Upload</a>
+                <router-link to="/" class="ui item">Gallery</router-link>
+                <router-link to="/upload" class="ui item">Upload</router-link>
                 <a @click="logOut" class="ui item">logOut</a>
             </div>
             <a v-else href="#" @click="login" class="ui item">LogIn</a>
